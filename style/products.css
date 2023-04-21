@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProBook.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProHeavy.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProLight.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProMedium.otf") format("truetype");
+}
+.ts-products-container {
+  width: 100%;
+  height: 400px;
+}
+.ts-products-container .ts-content {
+  color: #ffffff;
+  text-align: center;
+  margin: 7% auto auto auto;
+}
+.ts-products-container .ts-content .ts-content-heading {
+  font-weight: bold;
+  font-size: clamp(20px, 3vw, 45px);
+}
+.ts-products-container .ts-content .ts-line-styling {
+  margin: 25px 0;
+}
+.ts-products-container .ts-content .ts-content-text {
+  clear: both;
+  font-size: clamp(16px, 2.2vw, 45px);
+}
+.ts-products-container .btn {
+  background-color: #ec6820;
+  border-radius: 0px;
+  color: #ffffff;
+}
+
+.ts-products {
+  margin: 0 20% 200px 20%;
+}
+@media (max-width: 767px) {
+  .ts-products {
+    margin: 0 10% 100px 10%;
+  }
+}
+@media (max-width: 575px) {
+  .ts-products {
+    margin: 1px 2% 50px 2%;
+  }
+}
+.ts-products .pagination {
+  float: right;
+}
+.ts-products .pagination a {
+  color: #19335a;
+  float: left;
+  padding: 4px;
+  text-decoration: none;
+}
+.ts-products .ts-headings {
+  color: #ec6820;
+  font-size: 0.8rem;
+  margin: 20px 0;
+}
+.ts-products .ts-container .side-tabs {
+  float: left;
+  min-width: 180px;
+}
+@media (max-width: 575px) {
+  .ts-products .ts-container .side-tabs {
+    float: none;
+  }
+}
+.ts-products .ts-container .side-tabs .list .active {
+  color: #ec6820 !important;
+}
+.ts-products .ts-container .side-tabs .list .nav-link {
+  color: #19335a;
+  font-size: 0.8rem;
+}
+.ts-products .ts-container .side-tabs .list .nav-link .ts-sign {
+  float: right;
+}
+.ts-products .ts-container .side-tabs .list .list-item {
+  background-color: #E5E5E5;
+  margin: 0.5px 0px;
+}
+.ts-products .ts-container .side-tabs .list .list-item :active {
+  background-color: #ec6820;
+  color: #ffffff;
+}
+.ts-products .ts-container .container-grid {
+  margin-bottom: 70px;
+}
+.ts-products .ts-container .col {
+  text-align: center;
+}
+.ts-products .ts-container .col .product-img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 150px;
+}
+@media (min-width: 1200px) {
+  .ts-products .ts-container .col .product-img {
+    max-width: 230px;
+  }
+}/*# sourceMappingURL=products.css.map */

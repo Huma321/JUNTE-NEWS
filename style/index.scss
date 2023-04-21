@@ -1,0 +1,444 @@
+@import "./variable";
+// <*****************[CONTAINER]*****************>
+body {
+    font-family: $ts-font-FilsonPro;
+    color: $ts-Nile-Blue-color;
+}
+
+@mixin btn {
+    background-color: $ts-Papaya-Orange-color;
+    text-align: left;
+    border-radius: 0px;
+    color: $ts-white-color;
+}
+
+.ts-bg-container {
+    width: 100%;
+    height: 400px;
+    .ts-content {
+        color: $ts-white-color;
+        margin: 7% auto auto 20%;
+        .ts-span {
+            color: $ts-Papaya-Orange-color;
+            align-items: center;
+        }
+        .ts-content-heading {
+            font-weight: bold;
+            font-size: clamp(20px, 3vw, 45px);
+        }
+        .ts-styling-border {
+            background-color: $ts-Papaya-Orange-color;
+            width: 80px;
+            height: 10px;
+            margin: 25px 0;
+        }
+        .ts-content-text {
+            clear: both;
+            font-size: clamp(16px, 2.2vw, 45px);
+        }
+    }
+    .btn {
+        margin: 20px 0;
+        @include btn();
+    }
+}
+
+// <*****************[CONTAINER]*****************>
+.container {
+    max-width: 1842px;
+    &-md {
+        max-width: 1366px;
+        margin: auto;
+    }
+    .ts-btn-lang {
+        color: $ts-Papaya-Orange-color;
+        &:hover {
+            background-color: $ts-Papaya-Orange-color;
+            color: $ts-white-color;
+        }
+    }
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+// <*****************[NAVIGATION BAR]*****************>
+.ts-navigation {
+    padding: 0% 20%;
+    @include md-down {
+        padding: 0 10%;
+    }
+    @include sm-down {
+        padding: 0 2%;
+    }
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    background-color: $ts-Nile-Blue-color;
+}
+
+.ts-navbar {
+    padding: 0px;
+    font-family: $ts-font-FilsonPro;
+    font-weight: 900;
+    .dropdown-menu {
+        padding: 0px;
+        margin: 0px;
+        .dropdown-item {
+            color: $ts-white-color;
+            background-color: $ts-Nile-Blue-color;
+            &:hover {
+                background-color: gray;
+            }
+        }
+    }
+    &-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-inline: 15px;
+        padding-block: 13px;
+        @include md-up {
+            padding-block: 35px;
+        }
+        @include xxl-up {
+            border: none;
+        }
+        &-desc {
+            @include xxl-up {
+                display: none;
+            }
+        }
+    }
+    &-nav {
+        @include xxl-down {
+            gap: 2px;
+        }
+        .nav {
+            &-item {
+                @include xxl-down {
+                    padding: 0px;
+                }
+                .nav-btn {
+                    &:hover .bi-arrow-right {
+                        transform: scale(0.89);
+                    }
+                }
+            }
+            &-link {
+                padding: 0px;
+                margin-right: 15px;
+                color: $ts-white-color;
+                &:hover {
+                    background-color: $ts-Papaya-Orange-color;
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 0px;
+        margin: 0%;
+        &-icon {
+            width: 287px;
+            @include md-down {
+                width: 127px;
+            }
+        }
+    }
+    .navbar-toggler {
+        width: 22px;
+        height: 16px;
+        position: relative;
+        @extend %span-rotate;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover {
+            span:nth-child(3) {
+                width: 100%;
+                margin-left: 0;
+            }
+            span:nth-child(1) {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        // EXTEND NAV BUTTOON
+        %span-child {
+            -webkit-transform-origin: left center;
+            -moz-transform-origin: left center;
+            -o-transform-origin: left center;
+            transform-origin: left center;
+        }
+        %span-rotate {
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        &__span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $ts-Papaya-Orange-color;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            @extend %span-rotate;
+            -webkit-transition: 0.25s ease-in-out;
+            -moz-transition: 0.25s ease-in-out;
+            -o-transition: 0.25s ease-in-out;
+            transition: 0.25s ease-in-out;
+        }
+        &__span:nth-child(1) {
+            top: 0px;
+            @extend %span-child;
+            width: 100%;
+        }
+        &__span:nth-child(2) {
+            top: 6px;
+            @extend %span-child;
+        }
+        &__span:nth-child(3) {
+            top: 12px;
+            @extend %span-child;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    [aria-expanded="true"] .navbar-toggler__span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -2px;
+        left: 3px;
+        width: 100%;
+        margin-left: 0;
+    }
+    [aria-expanded="true"] .navbar-toggler__span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    [aria-expanded="true"] .navbar-toggler__span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 15px;
+        left: 3px;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+form input:-webkit-autofill,
+form input:-webkit-autofill:hover,
+form input:-webkit-autofill:focus,
+form input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #212529 !important;
+}
+
+// <*****************[BG CONTAINER]*****************>
+// <*****************[HERO SEC]*****************>
+.ts-index {
+    margin: 20px 20%;
+    text-align: center;
+    @include md-down {
+        margin: 20px 10%;
+    }
+    @include sm-down {
+        margin: 20px 5%;
+    }
+    .ts-container {
+        img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            margin: 30px 0;
+        }
+        .ts-row {
+            padding: 10px 0;
+            border-top: 4px solid $ts-Mercury-color;
+        }
+        .col-2 {
+            border-right: 1px solid $ts-Mercury-color;
+        }
+    }
+    .ts-border {
+        border-top: 8px solid #ec6820;
+        width: 100px;
+        margin: auto;
+    }
+    .card {
+        width: 30%;
+        margin: 0 10px;
+        padding: 0;
+        border: none;
+        .card-text {
+            margin: 10px 0;
+        }
+        .ts-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+    }
+    // p {
+    //     margin: 50px 0;
+    // }
+    .headings-clamp {
+        font-size: clamp(31px, 5vw, 46px);
+        font-weight: 900;
+        padding: 40px 0;
+        max-width: 20%;
+        @include sm-down {
+            max-width: 100%;
+        }
+    }
+    .btn {
+        @include btn();
+    }
+    .ts-left-bar {
+        float: left;
+        width: 35%;
+        text-align: left;
+        @include sm-down {
+            margin: 0 10%;
+            margin-bottom: 30px;
+            float: none;
+            width: 70%;
+        }
+        .btn {
+            width: 160px;
+            height: 40px;
+            .btn-text {
+                font-weight: 300;
+                font-size: 1.2em;
+            }
+        }
+        .text-box {
+            margin-top: 300px;
+            @include sm-down {
+                margin-top: 50px;
+            }
+        }
+    }
+    .ts-container-right {
+        .ts-img {
+            margin-top: 40px;
+            width: 65%;
+            object-fit: contain;
+            @include sm-down {
+                width: 100%;
+            }
+        }
+        text-align: left;
+    }
+}
+
+.mid-container {
+    background-color: $ts-Papaya-Orange-color;
+    color: $ts-white-color;
+    text-align: center;
+    align-items: center;
+    margin: 70px 0;
+    padding: 20px 20%;
+    text-align: center;
+    @include md-down {
+        padding: 20px 10%;
+    }
+    @include sm-down {
+        padding: 20px 5%;
+    }
+    .img {
+        object-fit: contain;
+        margin: 50px 0;
+    }
+}
+
+.ts-about {
+    .ts-row {
+        margin: auto;
+        clear: both;
+        .ts-headings {
+            font-size: 1.4rem;
+        }
+        .col {
+            .ts-col-img {
+                object-fit: contain;
+                height: 100px;
+            }
+        }
+    }
+    .ts-card {
+        width: 27%;
+        margin: auto;
+        height: 350px;
+        background-color: $ts-Nile-Blue-color;
+        color: $ts-white-color;
+        text-align: left;
+        background-size: cover;
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 100px;
+        }
+        .card-text {
+            font-size: 0.7rem;
+            font-weight: lighter;
+        }
+        .headings {
+            font-size: 12px;
+        }
+    }
+}
+
+// <*****************[FOOTER]*****************>
+.ts-footer {
+    padding: 100px 20%;
+    background-color: $ts-Nile-Blue-color;
+    @include md-down {
+        padding: 50px 10%;
+    }
+    @include sm-down {
+        padding: 25px 2%;
+        text-align: center;
+    }
+    .row {
+        @include sm-down {
+            margin: 2px;
+            display: inline-block;
+        }
+        .text {
+            font-size: 0.8rem;
+        }
+        .ts-span {
+            font-size: 1.3rem;
+        }
+    }
+    .col {
+        margin-bottom: 20px;
+        color: $ts-white-color;
+        text-align: left;
+        font-weight: 100;
+    }
+    .ts-img {
+        object-fit: contain;
+    }
+}

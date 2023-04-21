@@ -1,0 +1,60 @@
+@import './variable';
+// <*****************[HERO SEC]*****************
+.ts-contact {
+    margin: 0 20%;
+    @include md-down {
+        margin: 0 10%50px 10%;
+    }
+    @include sm-down {
+        margin: 0 2% 25px 2%;
+        text-align: center;
+    }
+    .ts-headings {
+        text-align: left;
+    }
+    .ts-text {
+        text-align: left;
+        font-weight: 350;
+        font-size: 11px;
+    }
+    .ts-btn-block {
+        border-radius: 0px;
+        color: $ts-white-color;
+        background-color: $ts-Nile-Blue-color;
+        &:hover {
+            background-color: $ts-Papaya-Orange-color;
+        }
+    }
+    .ts-btn {
+        float: right;
+        border-radius: 20px;
+        color: $ts-white-color;
+        background-color: $ts-Nile-Blue-color;
+        font-size: 11px;
+        &:hover {
+            background-color: $ts-Papaya-Orange-color;
+        }
+    }
+    .ts-img {
+        height: 50px;
+        object-fit: contain;
+        width: 100%;
+    }
+    .form-control {
+        border-radius: 20px;
+        border: 2px solid $ts-Mercury-color;
+        background-color: rgb(240, 240, 240);
+        margin-bottom: 15px;
+        padding: 4px 15px;
+        font-size: 11px;
+    }
+    .ts-row {
+        align-items: center;
+        margin: 15px 0;
+    }
+    .col {
+        margin-left: 15px;
+    }
+}
+
+// <*****************[HERO SEC]*****************

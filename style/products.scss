@@ -1,0 +1,97 @@
+    @import "./variable";
+    // <*****************[CONTAINER]*****************>
+    @mixin pagination {
+        float: right;
+        a {
+            color: $ts-Nile-Blue-color;
+            float: left;
+            padding: 4px;
+            text-decoration: none;
+        }
+    }
+    
+    .ts-products-container {
+        width: 100%;
+        height: 400px;
+        .ts-content {
+            color: $ts-white-color;
+            text-align: center;
+            margin: 7% auto auto auto;
+            .ts-content-heading {
+                font-weight: bold;
+                font-size: clamp(20px, 3vw, 45px);
+            }
+            .ts-line-styling {
+                margin: 25px 0;
+            }
+            .ts-content-text {
+                clear: both;
+                font-size: clamp(16px, 2.2vw, 45px);
+            }
+        }
+        .btn {
+            background-color: $ts-Papaya-Orange-color;
+            border-radius: 0px;
+            color: $ts-white-color;
+        }
+    }
+    
+    .ts-products {
+        margin: 0 20% 200px 20%;
+        @include md-down {
+            margin: 0 10% 100px 10%;
+        }
+        @include sm-down {
+            margin: 1px 2% 50px 2%;
+        }
+        .pagination {
+            @include pagination();
+        }
+        .ts-headings {
+            color: $ts-Papaya-Orange-color;
+            font-size: 0.8rem;
+            margin: 20px 0;
+        }
+        .ts-container {
+            .side-tabs {
+                float: left;
+                min-width: 180px;
+                @include sm-down {
+                    float: none;
+                }
+                .list {
+                    .active {
+                        color: $ts-Papaya-Orange-color !important;
+                    }
+                    .nav-link {
+                        color: $ts-Nile-Blue-color;
+                        font-size: 0.8rem;
+                        .ts-sign {
+                            float: right;
+                        }
+                    }
+                    .list-item {
+                        background-color: $ts-Mercury-color;
+                        margin: 0.5px 0px;
+                         :active {
+                            background-color: $ts-Papaya-Orange-color;
+                            color: $ts-white-color;
+                        }
+                    }
+                }
+            }
+            .container-grid {
+                margin-bottom: 70px;
+            }
+            .col {
+                text-align: center;
+                .product-img {
+                    object-fit: contain;
+                    max-width: 150px;
+                    @include xl-up {
+                        max-width: 230px;
+                    }
+                }
+            }
+        }
+    }

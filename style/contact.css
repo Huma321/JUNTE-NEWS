@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProBook.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProHeavy.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProLight.otf") format("truetype");
+}
+@font-face {
+  font-family: "FilsonPro";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../assets/Font/2/FilsonProMedium.otf") format("truetype");
+}
+.ts-contact {
+  margin: 0 20%;
+}
+@media (max-width: 767px) {
+  .ts-contact {
+    margin: 0 10% 50px 10%;
+  }
+}
+@media (max-width: 575px) {
+  .ts-contact {
+    margin: 0 2% 25px 2%;
+    text-align: center;
+  }
+}
+.ts-contact .ts-headings {
+  text-align: left;
+}
+.ts-contact .ts-text {
+  text-align: left;
+  font-weight: 350;
+  font-size: 11px;
+}
+.ts-contact .ts-btn-block {
+  border-radius: 0px;
+  color: #ffffff;
+  background-color: #19335a;
+}
+.ts-contact .ts-btn-block:hover {
+  background-color: #ec6820;
+}
+.ts-contact .ts-btn {
+  float: right;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: #19335a;
+  font-size: 11px;
+}
+.ts-contact .ts-btn:hover {
+  background-color: #ec6820;
+}
+.ts-contact .ts-img {
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+.ts-contact .form-control {
+  border-radius: 20px;
+  border: 2px solid #E5E5E5;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 15px;
+  padding: 4px 15px;
+  font-size: 11px;
+}
+.ts-contact .ts-row {
+  align-items: center;
+  margin: 15px 0;
+}
+.ts-contact .col {
+  margin-left: 15px;
+}/*# sourceMappingURL=contact.css.map */
